@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="add-step">
+        <button mat-fab color="accent" (click)="createNewStep(-1)">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+        
+    <div class="builder">
+        <div *ngFor="let element of totalElements; let i = index" [attr.data-index]="i" class="steps">
+            <mat-card class="mat-elevation-z5 initial-step" *ngIf="element.initial">
+                <mat-card-title class="mat-">Shiba Inu {{i}}</mat-card-title>
+            </mat-card>
+
+            <mat-card class="mat-elevation-z5 step" *ngIf="!element.initial">
+                <mat-card-title-group>
+                    <mat-card-title>Shiba Inu {{i}}</mat-card-title>
+                    <mat-card-subtitle>Small</mat-card-subtitle>
+                </mat-card-title-group>
+                <mat-card-content>
+                    {{longText}}
+                </mat-card-content>
+                <mat-card-actions align="end">
+                    <button mat-button  (click)="createNewStep(i)">add</button>
+                    <button mat-button (click)="removeStep(i)">remove</button>
+                  </mat-card-actions>
+            </mat-card>
+        </div>
+            
+    </div>
+
+    
+    
+</div>

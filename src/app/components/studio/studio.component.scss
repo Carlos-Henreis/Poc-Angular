@@ -1,0 +1,42 @@
+.content {
+    position: absolute;
+    width: 100%;
+    margin-top: 0.3rem;
+    /* bottom: -50px; */
+    height: 86%;
+    max-height: 86%;
+    overflow: auto;
+}
+
+.builder {
+    margin-top: 1rem;
+    width: 60%;
+    margin: auto;
+}
+
+.step {
+    margin-bottom: 8px;
+}
+
+.add-step {
+    margin: 16px 16px 16px 16px;
+    position: fixed !important;
+    bottom: 8%;
+    right: 8%;
+    z-index: 6;
+    button {
+        height: 86px;
+        width: 86px;
+    }
+}
+
+.steps {
+    justify-content: center;
+}
+
+.initial-step {
+    margin-bottom: 8px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px; 
+}
